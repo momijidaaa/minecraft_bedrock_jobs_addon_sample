@@ -1,10 +1,11 @@
 export const JOB_ID = "hunter";
 export const JOB_META = {
-  name: "\u72e9\u4eba",
-  tag: "[\u72e9]",
-  color: "\u00A7c",
-  description: "\u30e2\u30d6\u3092\u5012\u3057\u3066XP\u3068\u5831\u916c\u3092\u7372\u5f97"
+  name: "狩人",
+  tag: "[狩]",
+  color: "§c",
+  description: "モブを倒してXPと報酬を獲得"
 };
+
 
 export const KILL_REWARDS = {
   // 家畜
