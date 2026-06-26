@@ -1,10 +1,11 @@
 export const JOB_ID = "miner";
 export const JOB_META = {
-  name: "\u9271\u592b",
-  tag: "[\u9271]",
-  color: "\u00A77",
-  description: "\u9271\u77f3\u3092\u63a1\u6398\u3057\u3066XP\u3068\u5831\u916c\u3092\u7372\u5f97"
+  name: "鉱夫",
+  tag: "[鉱]",
+  color: "§7",
+  description: "鉱石を採掘してXPと報酬を獲得"
 };
+
 
 export const BREAK_REWARDS = {
   // 石系
