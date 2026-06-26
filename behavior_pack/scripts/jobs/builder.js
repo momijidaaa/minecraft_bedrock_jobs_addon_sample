@@ -1,14 +1,12 @@
-
 export const JOB_ID = "builder";
 export const JOB_META = {
-  name: "\u5efa\u7bc9\u5bb6",
-  tag: "[\u5efa]",
-  color: "\u00A7e",
-  description: "\u30d6\u30ed\u30c3\u30af\u3092\u8a2d\u7f6e\u3057\u3066XP\u3068\u5831\u916c\u3092\u7372\u5f97\uff08\u521d\u56de\u8a2d\u7f6e\u306e\u307f\uff09"
+  name: "建築家",
+  tag: "[建]",
+  color: "§e",
+  description: "ブロックを設置してXPと報酬を獲得（初回設置のみ）"
 };
 
 export const PLACE_REWARDS = {
-  // 石・石系
   "minecraft:stone":                    { xp: [0.4, 1.0],  coins: [0.05, 0.2] },
   "minecraft:cobblestone":              { xp: [0.3, 0.8],  coins: [0.03, 0.15] },
   "minecraft:mossy_cobblestone":        { xp: [0.5, 1.2],  coins: [0.08, 0.25] },
@@ -28,7 +26,6 @@ export const PLACE_REWARDS = {
   "minecraft:tuff_bricks":              { xp: [0.8, 1.8],  coins: [0.1, 0.4]  },
   "minecraft:chiseled_tuff":            { xp: [1.0, 2.2],  coins: [0.15, 0.5] },
   "minecraft:polished_tuff":            { xp: [0.8, 1.8],  coins: [0.1, 0.4]  },
-  // 砂岩
   "minecraft:sandstone":                { xp: [0.6, 1.4],  coins: [0.08, 0.3] },
   "minecraft:chiseled_sandstone":       { xp: [0.8, 1.8],  coins: [0.1, 0.4]  },
   "minecraft:cut_sandstone":            { xp: [0.8, 1.8],  coins: [0.1, 0.4]  },
@@ -37,10 +34,8 @@ export const PLACE_REWARDS = {
   "minecraft:chiseled_red_sandstone":   { xp: [0.8, 1.8],  coins: [0.1, 0.4]  },
   "minecraft:cut_red_sandstone":        { xp: [0.8, 1.8],  coins: [0.1, 0.4]  },
   "minecraft:smooth_red_sandstone":     { xp: [0.8, 1.8],  coins: [0.1, 0.4]  },
-  // レンガ
   "minecraft:bricks":                   { xp: [1.0, 2.2],  coins: [0.2, 0.6]  },
   "minecraft:mud_bricks":               { xp: [0.8, 1.8],  coins: [0.1, 0.4]  },
-  // 木材
   "minecraft:oak_planks":               { xp: [0.4, 1.0],  coins: [0.05, 0.2] },
   "minecraft:spruce_planks":            { xp: [0.4, 1.0],  coins: [0.05, 0.2] },
   "minecraft:birch_planks":             { xp: [0.4, 1.0],  coins: [0.05, 0.2] },
@@ -54,7 +49,6 @@ export const PLACE_REWARDS = {
   "minecraft:bamboo_mosaic":            { xp: [0.6, 1.4],  coins: [0.08, 0.3] },
   "minecraft:crimson_planks":           { xp: [0.6, 1.4],  coins: [0.08, 0.3] },
   "minecraft:warped_planks":            { xp: [0.6, 1.4],  coins: [0.08, 0.3] },
-  // 原木（建築用途）
   "minecraft:oak_log":                  { xp: [0.4, 1.0],  coins: [0.05, 0.2] },
   "minecraft:spruce_log":               { xp: [0.4, 1.0],  coins: [0.05, 0.2] },
   "minecraft:birch_log":                { xp: [0.4, 1.0],  coins: [0.05, 0.2] },
@@ -65,7 +59,6 @@ export const PLACE_REWARDS = {
   "minecraft:cherry_log":               { xp: [0.6, 1.4],  coins: [0.08, 0.3] },
   "minecraft:crimson_stem":             { xp: [0.6, 1.4],  coins: [0.08, 0.3] },
   "minecraft:warped_stem":              { xp: [0.6, 1.4],  coins: [0.08, 0.3] },
-  // ガラス
   "minecraft:glass":                    { xp: [0.8, 1.8],  coins: [0.1, 0.4]  },
   "minecraft:tinted_glass":             { xp: [1.2, 2.5],  coins: [0.2, 0.7]  },
   "minecraft:white_stained_glass":      { xp: [1.0, 2.0],  coins: [0.15, 0.5] },
@@ -84,13 +77,11 @@ export const PLACE_REWARDS = {
   "minecraft:green_stained_glass":      { xp: [1.0, 2.0],  coins: [0.15, 0.5] },
   "minecraft:red_stained_glass":        { xp: [1.0, 2.0],  coins: [0.15, 0.5] },
   "minecraft:black_stained_glass":      { xp: [1.0, 2.0],  coins: [0.15, 0.5] },
-  // クォーツ
   "minecraft:quartz_block":             { xp: [1.5, 3.0],  coins: [0.3, 0.8]  },
   "minecraft:chiseled_quartz_block":    { xp: [1.8, 3.5],  coins: [0.4, 1.0]  },
   "minecraft:quartz_pillar":            { xp: [1.8, 3.5],  coins: [0.4, 1.0]  },
   "minecraft:smooth_quartz":            { xp: [1.5, 3.0],  coins: [0.3, 0.8]  },
   "minecraft:quartz_bricks":            { xp: [1.8, 3.5],  coins: [0.4, 1.0]  },
-  // テラコッタ
   "minecraft:terracotta":               { xp: [0.8, 1.8],  coins: [0.1, 0.4]  },
   "minecraft:white_terracotta":         { xp: [1.0, 2.0],  coins: [0.15, 0.5] },
   "minecraft:orange_terracotta":        { xp: [1.0, 2.0],  coins: [0.15, 0.5] },
@@ -124,7 +115,6 @@ export const PLACE_REWARDS = {
   "minecraft:green_glazed_terracotta":      { xp: [1.5, 2.8],  coins: [0.2, 0.6]  },
   "minecraft:red_glazed_terracotta":        { xp: [1.5, 2.8],  coins: [0.2, 0.6]  },
   "minecraft:black_glazed_terracotta":      { xp: [1.5, 2.8],  coins: [0.2, 0.6]  },
-  // コンクリート
   "minecraft:white_concrete":           { xp: [0.8, 1.8],  coins: [0.1, 0.4]  },
   "minecraft:orange_concrete":          { xp: [0.8, 1.8],  coins: [0.1, 0.4]  },
   "minecraft:magenta_concrete":         { xp: [0.8, 1.8],  coins: [0.1, 0.4]  },
@@ -141,7 +131,6 @@ export const PLACE_REWARDS = {
   "minecraft:green_concrete":           { xp: [0.8, 1.8],  coins: [0.1, 0.4]  },
   "minecraft:red_concrete":             { xp: [0.8, 1.8],  coins: [0.1, 0.4]  },
   "minecraft:black_concrete":           { xp: [0.8, 1.8],  coins: [0.1, 0.4]  },
-  // ウール
   "minecraft:white_wool":               { xp: [0.5, 1.2],  coins: [0.05, 0.2] },
   "minecraft:orange_wool":              { xp: [0.5, 1.2],  coins: [0.05, 0.2] },
   "minecraft:magenta_wool":             { xp: [0.5, 1.2],  coins: [0.05, 0.2] },
@@ -158,12 +147,10 @@ export const PLACE_REWARDS = {
   "minecraft:green_wool":               { xp: [0.5, 1.2],  coins: [0.05, 0.2] },
   "minecraft:red_wool":                 { xp: [0.5, 1.2],  coins: [0.05, 0.2] },
   "minecraft:black_wool":               { xp: [0.5, 1.2],  coins: [0.05, 0.2] },
-  // 海洋系
   "minecraft:prismarine":               { xp: [2.0, 4.0],  coins: [0.5, 1.5]  },
   "minecraft:prismarine_bricks":        { xp: [2.5, 5.0],  coins: [0.7, 2.0]  },
   "minecraft:dark_prismarine":          { xp: [3.0, 5.5],  coins: [1.0, 2.5]  },
   "minecraft:sea_lantern":              { xp: [2.5, 5.0],  coins: [0.7, 2.0]  },
-  // ネザー系
   "minecraft:nether_bricks":            { xp: [1.5, 3.0],  coins: [0.3, 0.8]  },
   "minecraft:cracked_nether_bricks":    { xp: [1.5, 3.0],  coins: [0.3, 0.8]  },
   "minecraft:chiseled_nether_bricks":   { xp: [1.8, 3.5],  coins: [0.4, 1.0]  },
@@ -176,7 +163,6 @@ export const PLACE_REWARDS = {
   "minecraft:polished_blackstone_bricks": { xp: [1.5, 3.0], coins: [0.3, 0.8] },
   "minecraft:gilded_blackstone":        { xp: [2.5, 4.5],  coins: [0.8, 2.0]  },
   "minecraft:shroomlight":              { xp: [2.0, 4.0],  coins: [0.5, 1.5]  },
-  // 深層岩
   "minecraft:deepslate":                { xp: [0.5, 1.2],  coins: [0.05, 0.2] },
   "minecraft:cobbled_deepslate":        { xp: [0.5, 1.2],  coins: [0.05, 0.2] },
   "minecraft:polished_deepslate":       { xp: [0.8, 1.8],  coins: [0.1, 0.4]  },
@@ -185,14 +171,11 @@ export const PLACE_REWARDS = {
   "minecraft:deepslate_tiles":          { xp: [1.5, 3.0],  coins: [0.3, 0.8]  },
   "minecraft:cracked_deepslate_tiles":  { xp: [1.5, 3.0],  coins: [0.3, 0.8]  },
   "minecraft:chiseled_deepslate":       { xp: [1.5, 3.0],  coins: [0.3, 0.8]  },
-  // エンド系
   "minecraft:end_stone":                { xp: [1.0, 2.2],  coins: [0.2, 0.6]  },
   "minecraft:end_stone_bricks":         { xp: [2.0, 4.0],  coins: [0.5, 1.5]  },
   "minecraft:purpur_block":             { xp: [2.5, 4.5],  coins: [0.7, 2.0]  },
   "minecraft:purpur_pillar":            { xp: [2.5, 4.5],  coins: [0.7, 2.0]  },
-  // 貴重系
   "minecraft:obsidian":                 { xp: [4.0, 7.0],  coins: [1.5, 3.5]  },
-  "minecraft:crying_obsidian":          { xp: [4.0, 7.0],  coins: [1.5, 3.5]  },
   "minecraft:crying_obsidian":          { xp: [4.0, 7.0],  coins: [1.5, 3.5]  },
   "minecraft:iron_block":               { xp: [5.0, 9.0],  coins: [2.0, 4.5]  },
   "minecraft:gold_block":               { xp: [7.0, 12.0], coins: [3.0, 7.0]  },
@@ -205,7 +188,6 @@ export const PLACE_REWARDS = {
   "minecraft:waxed_copper_block":       { xp: [3.5, 6.0],  coins: [1.0, 3.0]  },
   "minecraft:copper_grate":             { xp: [3.0, 5.5],  coins: [0.8, 2.5]  },
   "minecraft:cut_copper":               { xp: [3.0, 5.5],  coins: [0.8, 2.5]  },
-  // 光源
   "minecraft:glowstone":                { xp: [1.5, 3.0],  coins: [0.3, 0.8]  },
   "minecraft:lantern":                  { xp: [1.5, 3.0],  coins: [0.3, 0.8]  },
   "minecraft:soul_lantern":             { xp: [1.5, 3.0],  coins: [0.3, 0.8]  },
@@ -214,35 +196,27 @@ export const PLACE_REWARDS = {
   "minecraft:budding_amethyst":         { xp: [3.0, 6.0],  coins: [1.0, 3.0]  },
 };
 
-// 追加ブロック（末尾に追記）
 Object.assign(PLACE_REWARDS, {
-  // レンガ・石材追加
   "minecraft:mud_bricks":               { xp: [0.8, 1.8],  coins: [0.1, 0.4]   },
   "minecraft:packed_mud":               { xp: [0.5, 1.2],  coins: [0.05, 0.2]  },
   "minecraft:nether_bricks":            { xp: [1.5, 3.0],  coins: [0.3, 0.8]   },
   "minecraft:cracked_nether_bricks":    { xp: [1.5, 3.0],  coins: [0.3, 0.8]   },
   "minecraft:chiseled_nether_bricks":   { xp: [1.8, 3.5],  coins: [0.4, 1.0]   },
   "minecraft:red_nether_bricks":        { xp: [1.8, 3.5],  coins: [0.4, 1.0]   },
-  // 銅系追加
   "minecraft:waxed_exposed_copper":     { xp: [3.5, 6.0],  coins: [1.0, 3.0]   },
   "minecraft:waxed_oxidized_copper":    { xp: [3.5, 6.0],  coins: [1.0, 3.0]   },
   "minecraft:waxed_weathered_copper":   { xp: [3.5, 6.0],  coins: [1.0, 3.0]   },
   "minecraft:waxed_cut_copper":         { xp: [3.5, 6.0],  coins: [1.0, 3.0]   },
   "minecraft:copper_bulb":              { xp: [2.5, 5.0],  coins: [0.6, 2.0]   },
   "minecraft:waxed_copper_bulb":        { xp: [2.5, 5.0],  coins: [0.6, 2.0]   },
-  // 竹・竹モザイク
   "minecraft:bamboo_block":             { xp: [0.4, 1.0],  coins: [0.05, 0.2]  },
   "minecraft:stripped_bamboo_block":    { xp: [0.5, 1.2],  coins: [0.06, 0.22] },
   "minecraft:bamboo_mosaic":            { xp: [0.6, 1.4],  coins: [0.08, 0.3]  },
-  // マングローブ
   "minecraft:mangrove_roots":           { xp: [0.4, 1.0],  coins: [0.05, 0.2]  },
   "minecraft:muddy_mangrove_roots":     { xp: [0.4, 1.0],  coins: [0.05, 0.2]  },
-  // チェリー
   "minecraft:cherry_log":               { xp: [0.6, 1.4],  coins: [0.08, 0.3]  },
-  // ペールオーク
   "minecraft:pale_oak_log":             { xp: [0.5, 1.2],  coins: [0.06, 0.22] },
   "minecraft:pale_oak_planks":          { xp: [0.5, 1.2],  coins: [0.06, 0.22] },
-  // ガラス板
   "minecraft:glass_pane":               { xp: [0.6, 1.4],  coins: [0.06, 0.25] },
   "minecraft:white_stained_glass_pane":      { xp: [0.8, 1.6],  coins: [0.1, 0.4]   },
   "minecraft:orange_stained_glass_pane":     { xp: [0.8, 1.6],  coins: [0.1, 0.4]   },
@@ -260,7 +234,6 @@ Object.assign(PLACE_REWARDS, {
   "minecraft:green_stained_glass_pane":      { xp: [0.8, 1.6],  coins: [0.1, 0.4]   },
   "minecraft:red_stained_glass_pane":        { xp: [0.8, 1.6],  coins: [0.1, 0.4]   },
   "minecraft:black_stained_glass_pane":      { xp: [0.8, 1.6],  coins: [0.1, 0.4]   },
-  // 特殊ブロック
   "minecraft:bookshelf":                { xp: [1.5, 3.0],  coins: [0.3, 1.0]   },
   "minecraft:chiseled_bookshelf":       { xp: [2.0, 4.0],  coins: [0.5, 1.5]   },
   "minecraft:lodestone":                { xp: [5.0, 9.0],  coins: [2.0, 5.0]   },
@@ -283,7 +256,6 @@ Object.assign(PLACE_REWARDS, {
   "minecraft:trapped_chest":            { xp: [1.5, 3.0],  coins: [0.3, 1.0]   },
   "minecraft:ender_chest":              { xp: [8.0, 14.0], coins: [4.0, 10.0]  },
   "minecraft:shulker_box":              { xp: [5.0, 9.0],  coins: [2.0, 5.0]   },
-  // 装飾
   "minecraft:flower_pot":               { xp: [0.5, 1.2],  coins: [0.05, 0.2]  },
   "minecraft:item_frame":               { xp: [0.5, 1.2],  coins: [0.05, 0.2]  },
   "minecraft:glow_item_frame":          { xp: [1.0, 2.0],  coins: [0.2, 0.6]   },
@@ -309,7 +281,6 @@ Object.assign(PLACE_REWARDS, {
   "minecraft:green_candle":             { xp: [0.5, 1.2],  coins: [0.05, 0.2]  },
   "minecraft:red_candle":               { xp: [0.5, 1.2],  coins: [0.05, 0.2]  },
   "minecraft:black_candle":             { xp: [0.5, 1.2],  coins: [0.05, 0.2]  },
-  // 階段・スラブ（低単価）
   "minecraft:oak_stairs":               { xp: [0.3, 0.8],  coins: [0.02, 0.1]  },
   "minecraft:spruce_stairs":            { xp: [0.3, 0.8],  coins: [0.02, 0.1]  },
   "minecraft:birch_stairs":             { xp: [0.3, 0.8],  coins: [0.02, 0.1]  },
@@ -325,7 +296,6 @@ Object.assign(PLACE_REWARDS, {
   "minecraft:brick_slab":               { xp: [0.3, 0.8],  coins: [0.02, 0.1]  },
   "minecraft:stone_brick_slab":         { xp: [0.3, 0.8],  coins: [0.02, 0.1]  },
   "minecraft:quartz_slab":              { xp: [0.5, 1.2],  coins: [0.05, 0.2]  },
-  // フェンス・壁
   "minecraft:oak_fence":                { xp: [0.3, 0.8],  coins: [0.02, 0.1]  },
   "minecraft:spruce_fence":             { xp: [0.3, 0.8],  coins: [0.02, 0.1]  },
   "minecraft:nether_brick_fence":       { xp: [0.5, 1.2],  coins: [0.05, 0.2]  },
