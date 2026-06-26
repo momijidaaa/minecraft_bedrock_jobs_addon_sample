@@ -1,7 +1,9 @@
+// scripts/main.js
 import { world, system, CommandPermissionLevel, CustomCommandStatus } from "@minecraft/server";
 import { showMainMenu, showStatusMenu } from "./ui.js";
 import { getConfig } from "./configLoader.js";
 import { registerAPIHandlers } from "./api.js";
+import { showPayMenu } from "./pay.js";
 import { registerBreakEvents, registerKillEvents, registerFishEvents, registerPlaceEvents } from "./events.js";
 import { getBalance } from "./playerData.js";
 
@@ -33,13 +35,28 @@ system.beforeEvents.startup.subscribe(({ customCommandRegistry }) => {
     return { status: CustomCommandStatus.Success };
   });
 
+
+  customCommandRegistry.registerCommand({
+    name: "jobaddon:pay",
+    description: "プレイヤーに送金する",
+    permissionLevel: CommandPermissionLevel.Any,
+    cheatsRequired: false,
+  }, (origin) => {
+    const player = origin.sourceEntity;
+    if (!player || player.typeId !== "minecraft:player")
+      return { status: CustomCommandStatus.Failure, message: "プレイヤーのみ" };
+    system.run(async () => await showPayMenu(player));
+    return { status: CustomCommandStatus.Success };
+  });
+
+  // /jobaddon:balance と /jobaddon:bal どちらも登録
   const balCallback = (origin) => {
     const player = origin.sourceEntity;
     if (!player || player.typeId !== "minecraft:player")
       return { status: CustomCommandStatus.Failure, message: "プレイヤーのみ" };
     const bal = getBalance(player);
     const currency = getConfig().currency.symbol;
-
+    
     player.sendMessage("§6[Jobs] §f残高: §a" + currency + bal.toFixed(2));
     return { status: CustomCommandStatus.Success };
   };
@@ -77,7 +94,8 @@ world.afterEvents.playerSpawn.subscribe((event) => {
   if (!event.initialSpawn) return;
   system.runTimeout(() => {
     event.player.sendMessage(
-      "§6[Jobs] §f/jobaddon:jobs で職業メニュー  /jobaddon:bal で残高確認"
+      "§6[Jobs] §f/jobaddon:jobs で職業メニュー  " +
+      "/jobaddon:bal で残高確認"
     );
   }, 60);
 });
