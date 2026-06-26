@@ -1,10 +1,11 @@
 export const JOB_ID = "woodcutter";
 export const JOB_META = {
-  name: "\u6728\u3053\u308a",
-  tag: "[\u6728]",
-  color: "\u00A76",
-  description: "\u6728\u3092\u4f10\u63a1\u3057\u3066XP\u3068\u5831\u916c\u3092\u7372\u5f97"
+  name: "木こり",
+  tag: "[木]",
+  color: "§6",
+  description: "木を伐採してXPと報酬を獲得"
 };
+
 
 // [xp_min, xp_max], [coin_min, coin_max]
 export const BREAK_REWARDS = {
