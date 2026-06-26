@@ -22,29 +22,28 @@ function notifyReward(player, job, result) {
   const sym = cfg.currency.symbol;
 
   if (cfg.system.actionbar_reward_display) {
-    let msg = job.color + job.tag + " \u00A7f+" + result.gainedXP + "XP";
-    if (result.gainedCoins > 0) msg += " \u00A7a+" + sym + result.gainedCoins;
-    msg += "  \u00A77" + result.currentXP.toFixed(1) + "/" + result.neededXP;
+    let msg = job.color + job.tag + " §f+" + result.gainedXP + "XP";
+    if (result.gainedCoins > 0) msg += " §a+" + sym + result.gainedCoins;
+    msg += "  §7" + result.currentXP.toFixed(1) + "/" + result.neededXP;
     player.onScreenDisplay.setActionBar(msg);
   }
 
   if (result.leveledUp) {
     if (cfg.system.levelup_title) {
-      const tc = cfg.system.levelup_title_color ?? "\u00A7e";
-      const sc = cfg.system.levelup_subtitle_color ?? "\u00A7f";
-      // title: "レベルアップ！"  subtitle: "Lv.1 → Lv.2"
+      const tc = cfg.system.levelup_title_color ?? "§e";
+      const sc = cfg.system.levelup_subtitle_color ?? "§f";
       player.runCommand(
-        "titleraw @s title {\"rawtext\":[{\"text\":\"" + tc + "\u30ec\u30d9\u30eb\u30a2\u30c3\u30d7!\"}]}"
+        "titleraw @s title {\"rawtext\":[{\"text\":\"" + tc + "レベルアップ!\"}]}"
       );
       player.runCommand(
         "titleraw @s subtitle {\"rawtext\":[{\"text\":\"" + sc +
-        job.tag + " Lv." + (result.newLevel - 1) + " \u2192 Lv." + result.newLevel + "\"}]}"
+        job.tag + " Lv." + (result.newLevel - 1) + " → Lv." + result.newLevel + "\"}]}"
       );
     }
     if (cfg.system.announce_levelup) {
       player.sendMessage(
-        "\u00A76[Jobs] " + job.color + job.tag + " " + job.name +
-        " \u00A7fLv.\u00A7e" + (result.newLevel - 1) + " \u00A7f\u2192 Lv.\u00A7e" + result.newLevel
+        "§6[Jobs] " + job.color + job.tag + " " + job.name +
+        " §fLv.§e" + (result.newLevel - 1) + " §f→ Lv.§e" + result.newLevel
       );
     }
     player.playSound(cfg.system.levelup_sound ?? "random.levelup");
