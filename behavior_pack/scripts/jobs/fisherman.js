@@ -6,6 +6,7 @@ export const JOB_META = {
   description: "\u91e3\u308a\u3067XP\u3068\u5831\u916c\u3092\u7372\u5f97"
 };
 
+
 export const FISH_REWARDS = {
   "minecraft:cod":           { xp: [3.0, 7.0],   coins: [1.0, 3.0]  },
   "minecraft:salmon":        { xp: [4.0, 8.5],   coins: [1.5, 4.5]  },
