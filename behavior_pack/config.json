@@ -1,0 +1,33 @@
+{
+  "_comment": "数値とtrue/falseのみ変更してください。ブロック・モブリストはscripts/jobs/内の各ファイルで管理",
+
+  "system": {
+    "job_limit": 3,
+    "max_level": 50,
+    "announce_levelup": true,
+    "levelup_sound": "random.levelup",
+    "actionbar_reward_display": true,
+    "coin_decimals": 2,
+    "xp_formula_base": 100,
+    "xp_formula_multiplier": 1.5,
+    "global_xp_rate": 1.0,
+    "global_coin_rate": 1.0,
+    "levelup_title": true,
+    "levelup_title_color": "\u00A7e",
+    "levelup_subtitle_color": "\u00A7f"
+  },
+
+  "currency": {
+    "name": "¥",
+    "symbol": "¥"
+  },
+
+  "jobs": {
+    "woodcutter": { "enabled": true, "xp_rate": 1.0, "coin_rate": 1.0 },
+    "miner":      { "enabled": true, "xp_rate": 1.0, "coin_rate": 1.0 },
+    "farmer":     { "enabled": true, "xp_rate": 1.0, "coin_rate": 1.0 },
+    "hunter":     { "enabled": true, "xp_rate": 1.0, "coin_rate": 1.0 },
+    "fisherman":  { "enabled": true, "xp_rate": 1.0, "coin_rate": 1.0 },
+    "builder":    { "enabled": true, "xp_rate": 1.0, "coin_rate": 0.6 }
+  }
+}
