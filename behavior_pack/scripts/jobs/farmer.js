@@ -1,10 +1,11 @@
 export const JOB_ID = "farmer";
 export const JOB_META = {
-  name: "\u8fb2\u592b",
-  tag: "[\u8fb2]",
-  color: "\u00A7a",
-  description: "\u4f5c\u7269\u3092\u53ce\u7a6b\u3057\u3066XP\u3068\u5831\u916c\u3092\u7372\u5f97"
+  name: "農夫",
+  tag: "[農]",
+  color: "§a",
+  description: "作物を収穫してXPと報酬を獲得"
 };
+
 
 // require_age: その成熟度以上でないと報酬なし
 // age_state: ブロックステートのキー名
