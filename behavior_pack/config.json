@@ -13,8 +13,8 @@
     "global_xp_rate": 1.0,
     "global_coin_rate": 1.0,
     "levelup_title": true,
-    "levelup_title_color": "\u00A7e",
-    "levelup_subtitle_color": "\u00A7f"
+    "levelup_title_color": "§e",
+    "levelup_subtitle_color": "§f"
   },
 
   "currency": {
