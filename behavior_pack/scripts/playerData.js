@@ -45,8 +45,7 @@ function getPlacedSet(player) {
 }
 
 function savePlacedSet(player, set) {
- 
- let arr = Array.from(set);
+  let arr = Array.from(set);
   if (arr.length > 5000) arr = arr.slice(arr.length - 5000);
   player.setDynamicProperty(PLACED_KEY, JSON.stringify(arr));
 }
